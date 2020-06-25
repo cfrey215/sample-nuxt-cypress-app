@@ -7,9 +7,12 @@
     ],
     "exclude": [
         "cypress/**",
+        "coverage/**",
         "cypress-coverage/**",
+        "jest-coverage/**",
         "test/**",
-        "node_modules/**"
+        "node_modules/**",
+        "**/*.config.js"
     ],
     "reporter": [
       "text-summary",

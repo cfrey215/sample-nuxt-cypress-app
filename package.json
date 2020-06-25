@@ -11,10 +11,15 @@
     "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "lint": "yarn lint:js",
     "test": "jest",
-    "cy:test": "cypress run",
-    "test:report": "cypress run && npm run cov:report && npm run open:report",
-    "cov:report": "npx nyc report --reporter text --reporter lcov",
-    "open:report": "open 'cypress-coverage/lcov-report/index.html'"
+    "unit-test-coverage": "npm run test && npm run open-jest-report",
+    "open-jest-report": "open 'jest-coverage/lcov-report/index.html'",
+    "cy-test": "cypress run",
+    "cy-test-coverage": "CYPRESS_COVERAGE=true cypress run && npm run cov-report && npm run open-cy-report",
+    "cov-report": "npx nyc report --reporter text --reporter lcov",
+    "open-cy-report": "open 'cypress-coverage/lcov-report/index.html'",
+    "precombine-reports": "rm -rf jest-coverage && rm -rf cypress-coverage",
+    "test-and-combine-reports": "npm test && npm run cy-test -- --env COVERAGE=true && sh tools/combine-coverage.sh && npm run open-report",
+    "open-report": "open coverage/lcov-report/index.html"
   },
   "dependencies": {
     "nuxt": "^2.13.0"

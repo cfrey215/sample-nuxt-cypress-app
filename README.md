@@ -40,9 +40,18 @@ return config
 
 ## Running Cypress tests and generating a code coverage report
 ```bash
-# running just cypress tests
-npm run cy:test
+# running unit tests
+npm run test
 
-# running cypress and generating a coverage report
-npm run test:report
+# running unit tests with coverage report
+npm run unit-test-coverage
+
+# running cypress tests
+npm run cy-test
+
+# running cypress with coverage report
+npm run cy-test-coverage
+
+# running all tests with combined coverage report
+npm run test-and-combine-reports
 ```
