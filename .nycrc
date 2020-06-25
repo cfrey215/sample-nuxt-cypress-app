@@ -1,0 +1,26 @@
+{
+    "cache": false,
+    "check-coverage": false,
+    "extension": [
+        ".js",
+        ".vue"
+    ],
+    "exclude": [
+        "cypress/**",
+        "cypress-coverage/**",
+        "test/**",
+        "node_modules/**"
+    ],
+    "reporter": [
+      "text-summary",
+      "lcov",
+      "clover",
+      "cobertura",
+      "json"
+    ],
+    "excludeNodeModules": true,
+    "all": true,
+    "sourceMap": false,
+    "instrument": false,
+    "report-dir": "cypress-coverage"
+}
