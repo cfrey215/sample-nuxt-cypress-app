@@ -75,6 +75,7 @@
             color="primary"
             nuxt
             to="/inspire"
+            data-cy="continue-button"
           >
             Continue
           </v-btn>

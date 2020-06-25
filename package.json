@@ -13,6 +13,7 @@
     "test": "jest",
     "unit-test-coverage": "npm run test && npm run open-jest-report",
     "open-jest-report": "open 'jest-coverage/lcov-report/index.html'",
+    "cy-open": "cypress open",
     "cy-test": "cypress run",
     "cy-test-coverage": "CYPRESS_COVERAGE=true cypress run && npm run cov-report && npm run open-cy-report",
     "cov-report": "npx nyc report --reporter text --reporter lcov",
